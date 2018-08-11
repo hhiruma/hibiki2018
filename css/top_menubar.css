@@ -1,0 +1,17 @@
+#TM_container {
+    position: absolute;
+    display: flex;
+    height: 1em;
+    left: 5%;
+    top: 5%;
+}
+
+.TM_element {
+    position: relative;
+    color: white;
+    flex-grow: 1;
+    height: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px 10px;
+}
