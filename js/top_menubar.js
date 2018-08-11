@@ -4,14 +4,10 @@ var topMenubarElement = Vue.component('top-menubar-element',{
         <div v-if="title == currentPage" class="TM_element hvr-underline-from-left">
             {{ title }}
         </div>
-        <div v-else class="TM_element hvr-underline-from-center">
+        <div v-else class="TM_element hvr-underline-from-center" @click="$emit('changePage', title)">
             {{ title }}
         </div>
     `,
-    created: function(){
-        console.log(this.title);
-        console.log(this.currentPage);
-    }
 })
 
 Vue.component('top-menubar', {
@@ -20,22 +16,25 @@ Vue.component('top-menubar', {
         return {
             pageList: global_pages,
             pageTitleList: []
-            // pageTitleList: global_pages.map(x => delete x['content'])
         }
     },
     template: `
         <div id="TM_container">
-            <top-menubar-element v-for="title in pageTitleList" :title="title" :currentPage="currentPage">
+            <top-menubar-element v-for="title in pageTitleList" :title="title" :currentPage="currentPage" @changePage="changePage">
             </top-menubar-element>
         </div>
     `,
     components: {
         'top-menubar-element': topMenubarElement
     },
+    methods: {
+        changePage(newTitle){
+            this.currentPage = newTitle
+        }
+    },
     created: function(){
         for(page of this.pageList){
             this.pageTitleList.unshift(page.title)
         }
-        console.log(this.pageTitleList)
     }
 })
