@@ -4,6 +4,8 @@ Vue.component('right-sidebar', {
         return {
             pageList: global_pages,
             pageTitleList: [],
+            bgImgUri: bgImgLink,
+            showMenu: true
         }
     },
     computed: {
@@ -12,12 +14,12 @@ Vue.component('right-sidebar', {
         }
     },
     template: `
-        <div id="RS_container">
-            <div id="RS_trigger">
+        <div id="RS_container" :class="{RS_menu_show: showMenu, RS_menu_hide: !showMenu}">
+            <div id="RS_trigger" @click="showMenu = !showMenu" :style="'background-image: url(' + bgImgUri + ');'">
                 メニュー
             </div>
 
-            <div id="RS_main_container">
+            <div id="RS_main_container" :style="'background-image: url(' + bgImgUri + ');'">
                 <div id="RS_page_selector">
                     <div id="RS_page_selector_header">
                         ページ

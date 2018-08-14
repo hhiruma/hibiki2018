@@ -1,9 +1,7 @@
 #RS_container {
     position: absolute;
-    background-color: gray;
     height: 100%;
     /*  */
-    left: 100px;
     width: 300px;
     /*  */
 }
@@ -17,6 +15,7 @@
     box-sizing: border-box;
     padding: 20px 10px;
     border-radius: 15px 0px 0px 15px;
+    cursor: pointer;
     /*  */
     background-color: green;
     /*  */
@@ -58,4 +57,14 @@
 
 .RS_page_selector_el:hover {
     background-color: rgba(255, 255, 255, 0.4);
+}
+
+.RS_menu_show {
+    right: 0px;
+    transition: all 0.4s ease;
+}
+
+.RS_menu_hide {
+    right: -250px;
+    transition: all 0.4s ease;
 }
