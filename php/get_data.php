@@ -15,6 +15,12 @@
     }
 ?>
 
+<?php
+    //背景用の講師柄のuri
+    $bgImgLink = get_template_directory_uri().'/images/bg.png';
+?>
+
 <script type="text/javascript">
+    const bgImgLink = <?php echo json_encode($bgImgLink); ?>;
     const global_pages = <?php echo json_encode($pages); ?>;
 </script>

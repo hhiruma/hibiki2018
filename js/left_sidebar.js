@@ -1,17 +1,18 @@
 Vue.component('left-sidebar', {
     data: function(){
         return {
-            nextStageInfo: ''
+            nextStageInfo: '',
+            bgImgUri: bgImgLink
         }
     },
     template: `
-        <div id="LS_container">
-            <div id="LS_trigger">
+        <div id="LS_container" :style="'background-image: url(' + bgImgUri + ');'">
+            <div id="LS_trigger" :style="'background-image: url(' + bgImgUri + ');'">
                 次回舞台
             </div>
             <div id="LS_main_container">
                 <div id="LS_title">
-                    次回舞台
+                    ★次回舞台
                 </div>
                 <div id="LS_content">
                     {{ nextStageInfo }}
