@@ -2,12 +2,13 @@ Vue.component('left-sidebar', {
     data: function(){
         return {
             nextStageInfo: '',
-            bgImgUri: bgImgLink
+            bgImgUri: bgImgLink,
+            showMenu: true
         }
     },
     template: `
-        <div id="LS_container" :style="'background-image: url(' + bgImgUri + ');'">
-            <div id="LS_trigger" :style="'background-image: url(' + bgImgUri + ');'">
+        <div id="LS_container" :class="{LS_menu_show: showMenu, LS_menu_hide: !showMenu}" :style="'background-image: url(' + bgImgUri + ');'">
+            <div id="LS_trigger" @click="showMenu = !showMenu"  :style="'background-image: url(' + bgImgUri + ');'">
                 次回舞台
             </div>
             <div id="LS_main_container">
