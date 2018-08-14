@@ -3,5 +3,10 @@ new Vue({
     el: "main",
     data: {
         currentPage: "トップ",
+    },
+    methods: {
+        changePage: function(newPage){
+            this.currentPage = newPage
+        }
     }
 })
