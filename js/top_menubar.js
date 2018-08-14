@@ -29,7 +29,7 @@ Vue.component('top-menubar', {
     },
     methods: {
         changePage(newTitle){
-            this.currentPage = newTitle
+            this.$emit('change-page', newTitle)
         }
     },
     created: function(){

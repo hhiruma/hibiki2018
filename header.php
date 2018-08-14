@@ -10,6 +10,7 @@
 
 		<!-- vue.js -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src='<? echo get_template_directory_uri();?>/js/external_resources/vue.js'></script>
 
 		<!-- hover.css -->
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/external_resources/hover.css"></script>

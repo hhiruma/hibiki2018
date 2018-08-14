@@ -1,0 +1,61 @@
+#RS_container {
+    position: absolute;
+    background-color: gray;
+    height: 100%;
+    /*  */
+    left: 100px;
+    width: 300px;
+    /*  */
+}
+
+#RS_trigger {
+    position: absolute;
+    writing-mode: vertical-lr;
+    color: white;
+    top: 100px;
+    width: 45px;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    border-radius: 15px 0px 0px 15px;
+    /*  */
+    background-color: green;
+    /*  */
+}
+
+#RS_main_container {
+    position: absolute;
+    left: 45px;
+    width: 255px;
+    height: 100%;
+/*  */
+    background-color: green;
+/*  */
+}
+
+#RS_page_selector {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#RS_page_selector_header {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.RS_page_selector_el{
+    margin: 5px 0px 5px 20px;
+    border: solid 1px white;
+    height: 35px;
+    cursor: pointer;
+}
+
+.RS_page_selector_highlighter {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.RS_page_selector_el:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
