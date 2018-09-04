@@ -1,6 +1,7 @@
 #RS_container {
     position: absolute;
     height: 100%;
+    overflow: hidden;
     /*  */
     width: 300px;
     /*  */
@@ -8,17 +9,18 @@
 
 #RS_trigger {
     position: absolute;
-    writing-mode: vertical-lr;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
     color: white;
     top: 100px;
-    width: 45px;
-    box-sizing: border-box;
-    padding: 20px 10px;
+    width: 50px;
+    height: 90px;
+    padding: 20px 5px;
     border-radius: 15px 0px 0px 15px;
     cursor: pointer;
-    /*  */
-    background-color: green;
-    /*  */
+    background-color: rgba(70, 74, 84, 0.9);
 }
 
 #RS_main_container {
@@ -26,9 +28,8 @@
     left: 45px;
     width: 255px;
     height: 100%;
-/*  */
-    background-color: green;
-/*  */
+    background-color: rgba(36, 41, 44, 0.9);
+    color: white;
 }
 
 #RS_page_selector {
@@ -38,8 +39,8 @@
 }
 
 #RS_page_selector_header {
-    font-size: 1.5em;
-    text-decoration: underline;
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
 .RS_page_selector_el{
@@ -65,6 +66,14 @@
 }
 
 .RS_menu_hide {
-    right: -250px;
+    right: -254px;
     transition: all 0.4s ease;
+}
+
+#RS_twitter {
+    padding: 0px 20px;
+}
+
+.RS_menu_over {
+    right: -240px;
 }

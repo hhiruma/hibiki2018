@@ -14,5 +14,14 @@ main{
     height: 100%;
 
     /**/
-    background: black;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+}
+
+#mainLogo {
+    position: absolute;
+    width: 300px;
+    bottom: 40px;
+    right: 50px;
 }
