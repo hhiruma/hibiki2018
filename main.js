@@ -7,6 +7,9 @@ new Vue({
     methods: {
         changePage: function(newPage){
             this.currentPage = newPage
+        },
+        hideRightSidebar: function(){
+            this.$refs.rightSidebar.hideSidebar()
         }
     },
 })

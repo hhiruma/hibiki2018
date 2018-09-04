@@ -10,8 +10,8 @@
 
 	<!-- <background-container></background-container> -->
 	<main-container :current-page="currentPage"></main-container>
-	<top-menubar :current-page="currentPage" @change-page="changePage"></top-menubar>
-	<right-sidebar :current-page="currentPage" @change-page="changePage"></right-sidebar>
+	<top-menubar :current-page="currentPage" @change-page="changePage" @hide-right-sidebar="hideRightSidebar"></top-menubar>
+	<right-sidebar :current-page="currentPage" @change-page="changePage" ref="rightSidebar"></right-sidebar>
 	<left-sidebar></left-sidebar>
 </main>
 

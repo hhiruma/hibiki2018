@@ -9,10 +9,15 @@ Vue.component('right-sidebar', {
             mouseOver: false
         }
     },
+    methods: {
+        hideSidebar(){
+            this.showMenu = false
+        }
+    },
     computed: {
         currentPg: function(){
             return this.currentPage
-        }
+        },
     },
     template: `
         <div id="RS_container" :class="{RS_menu_show: showMenu, RS_menu_hide: !showMenu, RS_menu_over: mouseOver && !showMenu}">

@@ -30,6 +30,9 @@ Vue.component('top-menubar', {
     methods: {
         changePage(newTitle){
             this.$emit('change-page', newTitle)
+            if(newTitle !== 'トップ'){
+                this.$emit('hide-right-sidebar')
+            }
         }
     },
     created: function(){
