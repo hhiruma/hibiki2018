@@ -9,7 +9,7 @@
 	</video> -->
 
 	<!-- <background-container></background-container> -->
-	<!-- <main-container></main-container> -->
+	<main-container :current-page="currentPage"></main-container>
 	<top-menubar :current-page="currentPage" @change-page="changePage"></top-menubar>
 	<right-sidebar :current-page="currentPage" @change-page="changePage"></right-sidebar>
 	<left-sidebar></left-sidebar>
@@ -17,6 +17,7 @@
 
 <?php get_footer(); ?>
 
+<script src="<?php echo get_template_directory_uri();?>/js/main_container.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/top_menubar.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/right_sidebar.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/left_sidebar.js"></script>
@@ -25,5 +26,6 @@
 <script> !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/top_menubar.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/main_container.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/right_sidebar.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/left_sidebar.css">

@@ -8,5 +8,5 @@ new Vue({
         changePage: function(newPage){
             this.currentPage = newPage
         }
-    }
+    },
 })
